@@ -1,0 +1,265 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+.logo-card {
+    width: 100%;
+}
+.logo-card img {
+    height: auto;
+    width: 10%;
+}
+#cart-icon {
+    color: white;
+    font-size: large;
+    position: relative;
+}
+#cart-icon:hover {
+    color: rgb(80, 255, 0);
+}
+.cart-count {
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    font-size: 10px;
+    top: -10px;
+    right: -10px;
+}
+
+.cart-section {
+    padding: 100px;
+    background-color: white;
+    margin-top: 30px;
+    display: none;
+}
+.total-price{
+    color: rgb(236, 6, 6);
+}
+#empty {
+    color: red;
+}
+
+h1 {
+    font-size: large;
+    color: rgb(0, 71, 171);
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+.checkout {
+    background-color: rgb(0, 71, 171);
+    border-color: rgb(0, 71, 171);
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout:active{
+    background-color: rgb(3, 36, 81);
+    border-color: rgb(3, 36, 81);
+}
+#item{
+    color: rgb(0, 71, 171);
+}
+
+.delete-btn {
+    background-color: rgb(250, 22, 22);
+    border-color: rgb(250, 22, 22);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: rgb(95, 5, 5);
+    border-color: rgb(95, 5, 5);
+}
+
+.categories ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25%;
+    margin: 2px -10px;
+    padding: 10px 100px;
+    cursor: pointer;
+    background-color: rgb(0, 71, 171);
+    color: white;
+}
+#arrow {
+    text-decoration: none;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+}
+#back-arrow {
+    cursor: pointer;
+    color: rgb(0, 71, 171);
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.categories li:hover {
+    color: rgb(80, 255, 0);
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 71, 171);
+    font-size: x-large;
+    font-weight: 800;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
+}
+
+.tyres-container,
+.batteries-container,
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15%;
+    margin-bottom: 100px;
+}
+
+.product-card {
+    background-color: white;
+    width: 100%;
+}
+.product-card img {
+    height: auto;
+    width: 50%;
+}
+.price {
+    color: rgb(240, 9, 9);
+}
+
+.product-card p {
+    font-size: medium;
+    font-weight: 600;
+}
+.product-card button {
+    border-radius: 5px;
+    background-color: rgb(0, 71, 171);
+    border-color: rgb(0, 71, 171);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.product-card button:active {
+    background-color: rgb(3, 36, 81);
+    border-color: rgb(3, 36, 81);
+}
+
+.details {
+    margin-top: -15px;
+}
+#view {
+    color: black;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.social-media ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    margin: -10px -10px;
+    padding: 10px 100px;
+    cursor: pointer;
+    background-color: rgb(0, 71, 171);
+    cursor: pointer;
+    font-size: large;
+}
+.social-media a {
+    color: white;
+}
+.social-media a:hover {
+    color: rgb(80, 255, 0);
+}
+#copyright {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 71, 171);
+    margin: -10px -10px;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo-card img {
+        width: 20%;
+    }
+    .categories ul {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .social-media ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .tyres-container,
+    .batteries-container,
+    .filters-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .logo-card img {
+        width: 30%;
+    }
+    .cart-section {
+        padding: 20px;
+    }
+    .categories ul {
+        padding: 5px 10px;
+        font-size: small;
+    }
+    .social-media ul {
+        font-size: medium;
+    }
+    .product-card img {
+        width: 80%;
+    }
+}
+
+/* Laptops Larger Than Average */
+@media (min-width: 1440px) {
+    .logo-card img {
+        width: 8%;
+    }
+    .cart-section {
+        padding: 150px;
+    }
+    .categories ul {
+        padding: 15px 150px;
+        gap: 10%;
+    }
+    .social-media ul {
+        gap: 100px;
+    }
+    .product-card img {
+        width: 40%;
+    }
+}
